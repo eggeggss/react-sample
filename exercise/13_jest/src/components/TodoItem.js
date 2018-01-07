@@ -12,7 +12,7 @@ class TodoItem extends Component {
     }
     return (
       <li className={className} onClick={this.onClick}>
-        {this.props.children}
+        {this.props.children}1
       </li>
     );
   }
