@@ -16,4 +16,11 @@ const mapStateToProps = (state) => {
   return { products, total };
 };
 
-// code here
+const mapDispatchToProps = dispatch => ({
+  onCheckoutClicked: () => dispatch(checkout()),
+});
+// const mapDispatchToProps = {
+//   onCheckoutClicked: checkout,
+// };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

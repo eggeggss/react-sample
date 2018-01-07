@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import './Product.css';
 
-const Product = ({ price, inventory = 0, quantity = 0, title }) => (
-  <div className="product">
+const Product = ({ className = '', price, inventory = 0, quantity = 0, title }) => (
+  <div className={`product ${className}`}>
     <span className="title">{title}</span>
     <span className="price">{price}</span>
     {inventory === 0 ? null : <span className="inventory">{inventory}</span>}

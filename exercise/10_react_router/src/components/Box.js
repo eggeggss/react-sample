@@ -1,14 +1,19 @@
 import React from 'react';
-// code here...
+import { Link } from 'react-router-dom';
 
 const Box = ({ vid, img }) => (
   <div className="box">
-    {/* code here */}
+    <Link className="image fit" to={`/vid/${vid}`}>
+      <img src={img} />
+    </Link>
     <div className="inner">
       <h3>Nascetur nunc varius commodo</h3>
       <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-      {/* code here */}
+
     </div>
+    <Link className="button fit" to={`/vid/${vid}`}>
+      Watch
+    </Link>
   </div>
 );
 

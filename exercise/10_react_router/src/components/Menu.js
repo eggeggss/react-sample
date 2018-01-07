@@ -1,10 +1,15 @@
 import React from 'react';
-// code here...
+import { NavLink } from 'react-router-dom';
 import './Menu.css';
-
+// Link pushstate
 const Menu = () => (
   <ul className="menu">
-    {/* code here... */}
+    <li className="menu -item">
+      <NavLink to="/vid">Videos</NavLink>
+    </li>
+    <li className="menu -item">
+      <NavLink to="/about">About</NavLink>
+    </li>
   </ul>
 );
 

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   RECEIVE_PRODUCTS,
   ADD_TO_CART,
@@ -17,6 +18,17 @@ const product = (state = {}, action) => {
   }
 };
 
+const products=(state=[],action)=>{
+    switch(action.type){
+        case RECEIVE_PRODUCTS:
+           return action.products;
+        case ADD_TO_CART:
+           return state.map(p=> product(p.action));
+        default:
+           return state;
+    }
+
+}
 // code here
 
 export default products;
